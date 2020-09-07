@@ -1,0 +1,71 @@
+html body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.box {
+    text-align: left;
+    box-sizing: border-box;
+    width: 600px;
+    padding: 10px;
+}
+
+.box-1 {
+    background: purple;
+}
+
+.box-2 {
+    background: violet;
+}
+
+.box-3 {
+    background: darkslateblue;
+}
+
+.box-4 {
+    background: green;
+}
+
+.box-5 {
+    background: yellow;
+}
+
+.box-6 {
+    background: orange; 
+}
+
+.box-7 {
+    background: red;
+}
+/*Mobile*/
+@media screen and (max-width: 600px) {
+    .box { 
+    flex-basis: 100%;
+  }
+}
+/*Tablet*/
+  @media screen and (min-width: 601px) and (max-width: 800px) {
+        
+    .box-1, .box-2, .box-6, .box-7 {
+        flex-grow: 1;
+        flex-basis: 100%;
+    }
+    .box-3, .box-4, .box-5 {
+         flex-basis: 33.3%;
+    }
+  }
+/*Desktop*/
+  @media screen and (min-width: 801px) {
+    .box-1, .box-2, .box-6, .box-7 {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+    .box-3, .box-4, .box-5 {
+        flex-basis: 33.3%;
+   }
+  }
